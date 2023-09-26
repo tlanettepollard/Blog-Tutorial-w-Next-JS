@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import profilePic from '../public/images/pexelsprofile.jpg'
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/Home.module.css';
 import Link from 'next/link';
+
 
 const name = 'Your Name';
 export const siteTitle = 'Next.js Sample Website';
@@ -25,14 +27,14 @@ export default function Layout({ children, home }) {
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <Image priority src="/nextjs-blog/public/images/profile.jpg" className={utilStyles.borderCircle} height={144} width={144} alt='' />
+                        <Image priority src={profilePic} className={utilStyles.borderCircle} height={144} width={144} alt='' />
                     </>
                 ) : (
                     <>
                         <Link href="/">
                             <Image
                                 priority
-                                src="/nextjs-blog/public/images/profile.jpg"
+                                src={profilePic}
                                 className={utilStyles.borderCircle}
                                 height={108}
                                 width={108}
